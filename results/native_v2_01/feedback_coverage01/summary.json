@@ -1,0 +1,1285 @@
+{
+  "status": "COMPLETE",
+  "tasks": {
+    "pour_tube": {
+      "outcome": "OBSERVED_OBJECT_RECOVERY_SIGNAL",
+      "tracking_counts": {
+        "base": 0,
+        "base_duplicate": 0,
+        "nominal_object": 2,
+        "observed_object": 3
+      },
+      "observed_accepted_tracking_count": 3,
+      "observed_minus_nominal": 1,
+      "observed_minus_base": 3,
+      "null_tracking_count_difference": 0,
+      "seeds": [
+        {
+          "task": "pour_tube",
+          "seed": 0,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.382999420166016,
+              "terminal_position_max_cm": 32.43138122558594,
+              "terminal_so3_mean_rad": 0.8184830546379089,
+              "terminal_so3_max_rad": 0.9338241219520569,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.444791793823242,
+              "post_feedback_so3_mean_deg": 27.43486213684082,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.391441345214844,
+              "terminal_position_max_cm": 32.43989181518555,
+              "terminal_so3_mean_rad": 0.8267167806625366,
+              "terminal_so3_max_rad": 0.9420861601829529,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.447587013244629,
+              "post_feedback_so3_mean_deg": 27.621213912963867,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 3.2332842350006104,
+              "terminal_position_max_cm": 3.7044947147369385,
+              "terminal_so3_mean_rad": 0.1361052542924881,
+              "terminal_so3_max_rad": 0.16058151423931122,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 3.697542905807495,
+              "post_feedback_so3_mean_deg": 6.846059799194336,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 2.0000112056732178,
+              "terminal_position_max_cm": 2.181164264678955,
+              "terminal_so3_mean_rad": 0.07765503227710724,
+              "terminal_so3_max_rad": 0.10392270982265472,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 2.970658540725708,
+              "post_feedback_so3_mean_deg": 4.330503463745117,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 44.829604477621615,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s0/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s0/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 29.510482283309102,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 5,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s0/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s0/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s0/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s0/feedback_coverage_4grid.mp4",
+              "video_bytes": 1658881,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s0/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s0/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        },
+        {
+          "task": "pour_tube",
+          "seed": 1,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.37350082397461,
+              "terminal_position_max_cm": 32.421321868896484,
+              "terminal_so3_mean_rad": 0.8239307999610901,
+              "terminal_so3_max_rad": 0.9392902851104736,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.442580223083496,
+              "post_feedback_so3_mean_deg": 27.51778793334961,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.374191284179688,
+              "terminal_position_max_cm": 32.42227554321289,
+              "terminal_so3_mean_rad": 0.8133631348609924,
+              "terminal_so3_max_rad": 0.9286865592002869,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.441904067993164,
+              "post_feedback_so3_mean_deg": 27.328880310058594,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 2.13397479057312,
+              "terminal_position_max_cm": 2.2932817935943604,
+              "terminal_so3_mean_rad": 0.10490331053733826,
+              "terminal_so3_max_rad": 0.12243074923753738,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 2.844707727432251,
+              "post_feedback_so3_mean_deg": 5.90165901184082,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 2.5871798992156982,
+              "terminal_position_max_cm": 2.911478042602539,
+              "terminal_so3_mean_rad": 0.07538682222366333,
+              "terminal_so3_max_rad": 0.10829943418502808,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 3.3937320709228516,
+              "post_feedback_so3_mean_deg": 4.055730819702148,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 7.58908149600029,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 5.436245615594089,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 5,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s1/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4",
+              "video_bytes": 1658228,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s1/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s1/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        },
+        {
+          "task": "pour_tube",
+          "seed": 2,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.394088745117188,
+              "terminal_position_max_cm": 32.442604064941406,
+              "terminal_so3_mean_rad": 0.8262282609939575,
+              "terminal_so3_max_rad": 0.9415956139564514,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.448478698730469,
+              "post_feedback_so3_mean_deg": 27.61409568786621,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 28.39432144165039,
+              "terminal_position_max_cm": 32.44284439086914,
+              "terminal_so3_mean_rad": 0.8269702196121216,
+              "terminal_so3_max_rad": 0.9423401951789856,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.44864559173584,
+              "post_feedback_so3_mean_deg": 27.626466751098633,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 4.229310035705566,
+              "terminal_position_max_cm": 5.787513256072998,
+              "terminal_so3_mean_rad": 0.3421340584754944,
+              "terminal_so3_max_rad": 0.5137681365013123,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 4.057190418243408,
+              "post_feedback_so3_mean_deg": 13.342155456542969,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 2.342470645904541,
+              "terminal_position_max_cm": 2.525686740875244,
+              "terminal_so3_mean_rad": 0.07952652126550674,
+              "terminal_so3_max_rad": 0.11001703888177872,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 3.1182758808135986,
+              "post_feedback_so3_mean_deg": 4.136758327484131,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 6.593864778056741,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s2/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s2/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 4.566921702586114,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 5,
+              "planning_object_qpos_bank_index": 5,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 5,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s2/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s2/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s2/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s2/feedback_coverage_4grid.mp4",
+              "video_bytes": 1660708,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s2/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/pour_tube/s2/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        }
+      ]
+    },
+    "wipe_board": {
+      "outcome": "OBSERVED_OBJECT_RECOVERY_SIGNAL",
+      "tracking_counts": {
+        "base": 0,
+        "base_duplicate": 0,
+        "nominal_object": 0,
+        "observed_object": 3
+      },
+      "observed_accepted_tracking_count": 3,
+      "observed_minus_nominal": 3,
+      "observed_minus_base": 3,
+      "null_tracking_count_difference": 0,
+      "seeds": [
+        {
+          "task": "wipe_board",
+          "seed": 0,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 39.98225784301758,
+              "terminal_position_max_cm": 47.81814956665039,
+              "terminal_so3_mean_rad": 0.6479044556617737,
+              "terminal_so3_max_rad": 0.713679313659668,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 16.11512565612793,
+              "post_feedback_so3_mean_deg": 27.930665969848633,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 9.11344051361084,
+              "terminal_position_max_cm": 15.039851188659668,
+              "terminal_so3_mean_rad": 0.6920324563980103,
+              "terminal_so3_max_rad": 1.2756612300872803,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 5.601917743682861,
+              "post_feedback_so3_mean_deg": 23.881826400756836,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 33.12356948852539,
+              "terminal_position_max_cm": 40.92906951904297,
+              "terminal_so3_mean_rad": 0.8451299071311951,
+              "terminal_so3_max_rad": 0.9063279032707214,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 12.75898551940918,
+              "post_feedback_so3_mean_deg": 32.40916442871094,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 5.454108715057373,
+              "terminal_position_max_cm": 6.009957313537598,
+              "terminal_so3_mean_rad": 0.1638413816690445,
+              "terminal_so3_max_rad": 0.19319264590740204,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 4.548008441925049,
+              "post_feedback_so3_mean_deg": 12.34739875793457,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 45.823790666647255,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 11.493644170463085,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 1,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s0/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4",
+              "video_bytes": 1153709,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s0/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s0/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        },
+        {
+          "task": "wipe_board",
+          "seed": 1,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 34.23993682861328,
+              "terminal_position_max_cm": 42.007808685302734,
+              "terminal_so3_mean_rad": 0.7649068236351013,
+              "terminal_so3_max_rad": 0.8250265121459961,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.248032569885254,
+              "post_feedback_so3_mean_deg": 30.845109939575195,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 39.99558639526367,
+              "terminal_position_max_cm": 47.83193588256836,
+              "terminal_so3_mean_rad": 0.6511726975440979,
+              "terminal_so3_max_rad": 0.7168853878974915,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 16.121028900146484,
+              "post_feedback_so3_mean_deg": 28.238670349121094,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 14.923850059509277,
+              "terminal_position_max_cm": 21.81868553161621,
+              "terminal_so3_mean_rad": 0.8166765570640564,
+              "terminal_so3_max_rad": 0.9123682975769043,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 6.780106544494629,
+              "post_feedback_so3_mean_deg": 28.145240783691406,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 3.3648810386657715,
+              "terminal_position_max_cm": 3.802182197570801,
+              "terminal_so3_mean_rad": 0.1577952802181244,
+              "terminal_so3_max_rad": 0.22127783298492432,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 3.3585495948791504,
+              "post_feedback_so3_mean_deg": 12.316160202026367,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 6.29276932682842,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s1/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s1/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 4.901460285298526,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 1,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s1/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s1/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s1/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s1/feedback_coverage_4grid.mp4",
+              "video_bytes": 1140027,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s1/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s1/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        },
+        {
+          "task": "wipe_board",
+          "seed": 2,
+          "status": "COMPLETE",
+          "groups": {
+            "base": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 33.98461151123047,
+              "terminal_position_max_cm": 41.78429412841797,
+              "terminal_so3_mean_rad": 0.7490248680114746,
+              "terminal_so3_max_rad": 0.812157928943634,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 13.232646942138672,
+              "post_feedback_so3_mean_deg": 29.97049331665039,
+              "lift_not_used_as_task_metric": true
+            },
+            "base_duplicate": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 30.20240020751953,
+              "terminal_position_max_cm": 37.9473762512207,
+              "terminal_so3_mean_rad": 0.7056833505630493,
+              "terminal_so3_max_rad": 0.77001953125,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 11.5332670211792,
+              "post_feedback_so3_mean_deg": 28.770065307617188,
+              "lift_not_used_as_task_metric": true
+            },
+            "nominal_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": false,
+              "terminal_position_mean_cm": 10.818166732788086,
+              "terminal_position_max_cm": 16.346616744995117,
+              "terminal_so3_mean_rad": 0.7106300592422485,
+              "terminal_so3_max_rad": 1.1550523042678833,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 5.68802547454834,
+              "post_feedback_so3_mean_deg": 27.140161514282227,
+              "lift_not_used_as_task_metric": true
+            },
+            "observed_object": {
+              "last50_real_steps": [
+                342,
+                391
+              ],
+              "terminal_tracking_all_steps": true,
+              "terminal_position_mean_cm": 5.772148132324219,
+              "terminal_position_max_cm": 6.134592533111572,
+              "terminal_so3_mean_rad": 0.217559814453125,
+              "terminal_so3_max_rad": 0.2640959918498993,
+              "post_feedback_real_steps": [
+                151,
+                391
+              ],
+              "post_feedback_position_mean_cm": 4.665590763092041,
+              "post_feedback_so3_mean_deg": 14.23458194732666,
+              "lift_not_used_as_task_metric": true
+            }
+          },
+          "optimizations": {
+            "nominal_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 8.550216112285852,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 4,
+              "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s2/reconstruction_nominal_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s2/optimization_nominal_object.npz"
+            },
+            "observed_object": {
+              "succeeded": true,
+              "status": "ACCEPTED",
+              "wall_seconds": 4.989285501651466,
+              "opt_steps": 4,
+              "attempts": 1,
+              "candidate_world_steps": 1228800,
+              "nominal_config": {
+                "num_dr": 1,
+                "xy_offset": 0.0,
+                "margin": -0.005,
+                "iterations_per_attempt": 4
+              },
+              "planning_robot_source_bank_index": 1,
+              "planning_object_qpos_bank_index": 1,
+              "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+              "planning_robot_velocity_bank_index": 1,
+              "planning_solver_warmstart": "ZERO",
+              "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s2/reconstruction_observed_object.npz",
+              "warmstart_slice": [
+                150,
+                450
+              ],
+              "reference_slice": [
+                151,
+                451
+              ],
+              "starting_rng_identical": true,
+              "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s2/optimization_observed_object.npz"
+            }
+          },
+          "plot": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s2/visuals/feedback_coverage_errors.png",
+          "contact_sheets": {
+            "comparison_2x2": {
+              "status": "DECODED",
+              "video": "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s2/feedback_coverage_4grid.mp4",
+              "video_bytes": 1125491,
+              "decoded_frames": 225,
+              "reported_frames": 225,
+              "reported_duration_s": 4.5,
+              "fps": 50.0,
+              "decoded_duration_s": 4.5,
+              "frame_size_px": [
+                1440,
+                960
+              ],
+              "sample_frame_indices": [
+                0,
+                11,
+                23,
+                35,
+                47,
+                58,
+                70,
+                82,
+                94,
+                106,
+                117,
+                129,
+                141,
+                153,
+                165,
+                176,
+                188,
+                200,
+                212,
+                224
+              ],
+              "sample_time_s": [
+                0.0,
+                0.22,
+                0.46,
+                0.7,
+                0.94,
+                1.16,
+                1.4,
+                1.64,
+                1.88,
+                2.12,
+                2.34,
+                2.58,
+                2.82,
+                3.06,
+                3.3,
+                3.52,
+                3.76,
+                4.0,
+                4.24,
+                4.48
+              ],
+              "contact_sheets": [
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s2/visuals/comparison_2x2_contact_sheet_1.jpg",
+                "/Users/jojo8888883/Desktop/26summer/autoresearch/research-runs/hand-to-robot-20261003-continuation/results/native_v2_01/feedback_coverage01/wipe_board/s2/visuals/comparison_2x2_contact_sheet_2.jpg"
+              ],
+              "sheet_layout": "two sheets up to 2x5; tile 720x480 preserves source aspect ratio",
+              "interpretation": "Full video decoded; contact sheets show evenly spaced samples across the full duration, not full-speed visual review."
+            }
+          }
+        }
+      ]
+    }
+  },
+  "both_development_tasks_show_frozen_signal": true,
+  "scope": "Two preselected development failures with existing seed0 controls and three recovery seeds each; accurate simulator poses; no liquid/wiping/real-time/generalization/novelty claim."
+}

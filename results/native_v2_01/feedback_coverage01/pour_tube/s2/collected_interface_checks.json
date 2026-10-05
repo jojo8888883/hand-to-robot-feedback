@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "task": "pour_tube",
+  "seed": 2,
+  "actual_bank": 5,
+  "causal_steps": [
+    148,
+    150
+  ],
+  "common_robot_state_and_rng": true,
+  "task_specific_object_state_sources": true,
+  "same_actual_execution_prefix_restore": true,
+  "acceptance_fallback_matches": true
+}

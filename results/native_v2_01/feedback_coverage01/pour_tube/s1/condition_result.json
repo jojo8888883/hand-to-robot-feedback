@@ -1,0 +1,673 @@
+{
+  "status": "COMPLETE",
+  "protocol": "NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md",
+  "seed": 1,
+  "base_controls_seed": 0,
+  "task": "pour_tube",
+  "job_id": "h2r-20261004-spider-v2-feedback-pour-tube-s1",
+  "source_revision": "44717007de41cbef7565dff7ff9f4453557a2d3d",
+  "controls_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/trajectory_mjwp_fast.npz",
+  "reference_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/official_loaded_reference.npz",
+  "spec_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_POUR_TUBE_S1_SPEC.json",
+  "run_spec": {
+    "job_id": "h2r-20261004-spider-v2-feedback-pour-tube-s1",
+    "source_revision": "44717007de41cbef7565dff7ff9f4453557a2d3d",
+    "dataset_revision": "8b0cdf2b24cc86d1c859050c5b0317ddbec59a63",
+    "protocol": "NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md",
+    "method": "single_step150_observed_object_recovery_diagnostic",
+    "seed": 1,
+    "author_cli_arguments": [
+      "+override=oakinkv2_fast",
+      "task=pour_tube",
+      "embodiment_type=right",
+      "data_id=0",
+      "robot_type=xhand",
+      "viewer=''",
+      "show_viewer=false",
+      "++wait_on_finish=false",
+      "save_video=true",
+      "save_info=true",
+      "save_config=true",
+      "++sanity_check_seconds=0",
+      "seed=1",
+      "dataset_dir=/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/v2_coverage01/pour_tube",
+      "num_dr=1",
+      "xy_offset_range=[0.0,0.0]",
+      "pair_margin_range=[-0.005,-0.005]"
+    ],
+    "execution_semantics": "Four actual continuous execution arms after common150-step prefix; sameactualrobotstate planning, nominal versus observed object state only; originalfallback on unacceptedsearch.",
+    "condition": "feedback_coverage01/pour_tube/s1",
+    "cpu_midpoint_compatibility": true,
+    "diagnostic_static_bypass": true,
+    "retained_original_result": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/official_fast_s0/condition_result.json",
+    "retained_compatible_static_result": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/static_midpoint_off/trace.json",
+    "preflight_filename": "V2_FEEDBACK_POUR_TUBE_S1_PREFLIGHT.json",
+    "comparison_mode": "nominal_object_vs_observed_object",
+    "original_control_seed": 0
+  },
+  "trajectory": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/trajectories.npz",
+  "boundary_state": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/boundary_state.npz",
+  "group_order": [
+    "base",
+    "base_duplicate",
+    "nominal_object",
+    "observed_object"
+  ],
+  "groups": [
+    {
+      "name": "base",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 5,
+          "xy_offset_m": [
+            0.0,
+            0.005
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.08552932998258646,
+            "root_position_error_mean_cm": 8.552932998258646,
+            "root_position_error_max_m": 0.32421325218814895,
+            "root_position_error_max_cm": 32.42132521881489,
+            "so3_error_mean_rad": 0.29741283291272874,
+            "so3_error_max_rad": 0.9392906769644067,
+            "max_root_rise_m": 0.0038763023912906647,
+            "track_reference_proxy_all_steps": false
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": -0.004109751433134079,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 28.373502750996536,
+            "root_position_error_max_cm": 32.42132521881489,
+            "so3_error_mean_rad": 0.8239310366704465,
+            "so3_error_max_rad": 0.9392906769644067,
+            "track_reference_proxy_all_steps": false
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": -0.004109729081392288,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.13442580025735196,
+            "root_position_error_mean_cm": 13.442580025735197,
+            "root_position_error_max_m": 0.32421325218814895,
+            "so3_error_mean_rad": 0.48027723044003984,
+            "so3_error_max_rad": 0.9392906769644067
+          }
+        }
+      ]
+    },
+    {
+      "name": "base_duplicate",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 5,
+          "xy_offset_m": [
+            0.0,
+            0.005
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.08552516776376932,
+            "root_position_error_mean_cm": 8.552516776376933,
+            "root_position_error_max_m": 0.32422273965306414,
+            "root_position_error_max_cm": 32.42227396530642,
+            "so3_error_mean_rad": 0.2953805862330766,
+            "so3_error_max_rad": 0.9286867763837662,
+            "max_root_rise_m": 0.0038757994771003723,
+            "track_reference_proxy_all_steps": false
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": -0.00410972535610199,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 28.37419249302069,
+            "root_position_error_max_cm": 32.42227396530642,
+            "so3_error_mean_rad": 0.8133633301131878,
+            "so3_error_max_rad": 0.9286867763837662,
+            "track_reference_proxy_all_steps": false
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": -0.004109721630811691,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.13441904744591002,
+            "root_position_error_mean_cm": 13.441904744591001,
+            "root_position_error_max_m": 0.32422273965306414,
+            "so3_error_mean_rad": 0.47698009993487805,
+            "so3_error_max_rad": 0.9286867763837662
+          }
+        }
+      ]
+    },
+    {
+      "name": "nominal_object",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 5,
+          "xy_offset_m": [
+            0.0,
+            0.005
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.02020740555790442,
+            "root_position_error_mean_cm": 2.0207405557904417,
+            "root_position_error_max_m": 0.05196203282264481,
+            "root_position_error_max_cm": 5.196203282264481,
+            "so3_error_mean_rad": 0.06487463784053779,
+            "so3_error_max_rad": 0.24961662821971192,
+            "max_root_rise_m": 0.09579996019601822,
+            "track_reference_proxy_all_steps": true
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": 0.025231599807739258,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 2.133974851042062,
+            "root_position_error_max_cm": 2.293281874230572,
+            "so3_error_mean_rad": 0.10490506594203035,
+            "so3_error_max_rad": 0.12243413410962792,
+            "track_reference_proxy_all_steps": true
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": 0.02442029118537903,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.028447076398220472,
+            "root_position_error_mean_cm": 2.8447076398220474,
+            "root_position_error_max_m": 0.05196203282264481,
+            "so3_error_mean_rad": 0.1030057189328752,
+            "so3_error_max_rad": 0.24961662821971192
+          }
+        }
+      ]
+    },
+    {
+      "name": "observed_object",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 5,
+          "xy_offset_m": [
+            0.0,
+            0.005
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.02359141671521866,
+            "root_position_error_mean_cm": 2.359141671521866,
+            "root_position_error_max_m": 0.05608444415144202,
+            "root_position_error_max_cm": 5.608444415144202,
+            "so3_error_mean_rad": 0.04501719021024709,
+            "so3_error_max_rad": 0.24582348739186125,
+            "max_root_rise_m": 0.08661361783742905,
+            "track_reference_proxy_all_steps": true
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": 0.020414240658283234,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 2.587179773916782,
+            "root_position_error_max_cm": 2.911478080278885,
+            "so3_error_mean_rad": 0.07538961736245303,
+            "so3_error_max_rad": 0.10830217360276284,
+            "track_reference_proxy_all_steps": true
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": 0.020407453179359436,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.03393731856631121,
+            "root_position_error_mean_cm": 3.3937318566311205,
+            "root_position_error_max_m": 0.05608444415144202,
+            "so3_error_mean_rad": 0.07078886406381438,
+            "so3_error_max_rad": 0.24582348739186125
+          }
+        }
+      ]
+    }
+  ],
+  "optimizations": {
+    "nominal_object": {
+      "succeeded": true,
+      "status": "ACCEPTED",
+      "wall_seconds": 7.58908149600029,
+      "opt_steps": 4,
+      "attempts": 1,
+      "candidate_world_steps": 1228800,
+      "nominal_config": {
+        "num_dr": 1,
+        "xy_offset": 0.0,
+        "margin": -0.005,
+        "iterations_per_attempt": 4
+      },
+      "planning_robot_source_bank_index": 5,
+      "planning_object_qpos_bank_index": 4,
+      "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+      "planning_robot_velocity_bank_index": 5,
+      "planning_solver_warmstart": "ZERO",
+      "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_nominal_object.npz",
+      "warmstart_slice": [
+        150,
+        450
+      ],
+      "reference_slice": [
+        151,
+        451
+      ],
+      "starting_rng_identical": true,
+      "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/optimization_nominal_object.npz"
+    },
+    "observed_object": {
+      "succeeded": true,
+      "status": "ACCEPTED",
+      "wall_seconds": 5.436245615594089,
+      "opt_steps": 4,
+      "attempts": 1,
+      "candidate_world_steps": 1228800,
+      "nominal_config": {
+        "num_dr": 1,
+        "xy_offset": 0.0,
+        "margin": -0.005,
+        "iterations_per_attempt": 4
+      },
+      "planning_robot_source_bank_index": 5,
+      "planning_object_qpos_bank_index": 5,
+      "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+      "planning_robot_velocity_bank_index": 5,
+      "planning_solver_warmstart": "ZERO",
+      "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_observed_object.npz",
+      "warmstart_slice": [
+        150,
+        450
+      ],
+      "reference_slice": [
+        151,
+        451
+      ],
+      "starting_rng_identical": true,
+      "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/optimization_observed_object.npz"
+    }
+  },
+  "bank_fields_exact": {
+    "execution_all1024": {
+      "qpos": true,
+      "qvel": true,
+      "qacc": true,
+      "time": true,
+      "ctrl": true,
+      "act": true,
+      "act_dot": true,
+      "qacc_warmstart": true,
+      "qfrc_applied": true,
+      "xfrc_applied": true,
+      "energy": true,
+      "mocap_pos": true,
+      "mocap_quat": true,
+      "xpos": true,
+      "xquat": true,
+      "xmat": true,
+      "xipos": true,
+      "ximat": true,
+      "geom_xpos": true,
+      "geom_xmat": true,
+      "site_xpos": true,
+      "site_xmat": true,
+      "cacc": true,
+      "cfrc_int": true,
+      "cfrc_ext": true,
+      "sensordata": true,
+      "actuator_length": true,
+      "actuator_velocity": true,
+      "actuator_force": true,
+      "ten_length": true,
+      "ten_velocity": true
+    }
+  },
+  "reconstruction": {
+    "api": "mujoco_warp.reset_data/write_basic_inputs/forward",
+    "common_inputs": {
+      "time": true,
+      "ctrl": true,
+      "act": true,
+      "qacc_warmstart": true,
+      "qfrc_applied": true,
+      "xfrc_applied": true,
+      "mocap_pos": true,
+      "mocap_quat": true,
+      "robot_qpos_0_18_identical": true,
+      "robot_qpos_is_actual": true,
+      "robot_qvel_0_18_identical": true,
+      "robot_qvel_is_actual": true,
+      "nominal_object_qpos_is_bank4": true,
+      "nominal_object_qvel_is_bank4_body_local_unchanged": true,
+      "observed_object_qpos_is_actual": true,
+      "observed_object_qvel_is_pose_only_estimate": true,
+      "zero_external_forces": true
+    },
+    "arms": {
+      "nominal_object": {
+        "requested_basic_all1024_exact_before_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "requested_basic_all1024_exact_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "all31_fields_finite_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "qacc": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "act_dot": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "energy": true,
+          "mocap_pos": true,
+          "mocap_quat": true,
+          "xpos": true,
+          "xquat": true,
+          "xmat": true,
+          "xipos": true,
+          "ximat": true,
+          "geom_xpos": true,
+          "geom_xmat": true,
+          "site_xpos": true,
+          "site_xmat": true,
+          "cacc": true,
+          "cfrc_int": true,
+          "cfrc_ext": true,
+          "sensordata": true,
+          "actuator_length": true,
+          "actuator_velocity": true,
+          "actuator_force": true,
+          "ten_length": true,
+          "ten_velocity": true
+        },
+        "static_world_matches_actual_prefix": {
+          "floor_geom0_xpos": true,
+          "floor_geom0_xmat": true,
+          "world_body0_xquat": true
+        },
+        "qacc_warmstart_zero": true,
+        "planning_robot_qpos_bank_index": 5,
+        "robot_qvel_bank_index": 5,
+        "object_qpos_bank_index": 4,
+        "object_qvel_source": "BANK4_BODY_LOCAL_UNCHANGED",
+        "angular_velocity_frame": "NOMINAL_BODY_LOCAL",
+        "derived_state_source": "GPU_FORWARD",
+        "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_nominal_object.npz"
+      },
+      "observed_object": {
+        "requested_basic_all1024_exact_before_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "requested_basic_all1024_exact_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "all31_fields_finite_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "qacc": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "act_dot": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "energy": true,
+          "mocap_pos": true,
+          "mocap_quat": true,
+          "xpos": true,
+          "xquat": true,
+          "xmat": true,
+          "xipos": true,
+          "ximat": true,
+          "geom_xpos": true,
+          "geom_xmat": true,
+          "site_xpos": true,
+          "site_xmat": true,
+          "cacc": true,
+          "cfrc_int": true,
+          "cfrc_ext": true,
+          "sensordata": true,
+          "actuator_length": true,
+          "actuator_velocity": true,
+          "actuator_force": true,
+          "ten_length": true,
+          "ten_velocity": true
+        },
+        "static_world_matches_actual_prefix": {
+          "floor_geom0_xpos": true,
+          "floor_geom0_xmat": true,
+          "world_body0_xquat": true
+        },
+        "qacc_warmstart_zero": true,
+        "planning_robot_qpos_bank_index": 5,
+        "robot_qvel_bank_index": 5,
+        "object_qpos_bank_index": 5,
+        "object_qvel_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+        "angular_velocity_frame": "ACTUAL_BODY_LOCAL",
+        "derived_state_source": "GPU_FORWARD",
+        "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_observed_object.npz"
+      }
+    },
+    "gpu_dynamic_checks": true
+  },
+  "planning_inputs": {
+    "nominal_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_nominal_object.npz",
+    "observed_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/reconstruction_observed_object.npz"
+  },
+  "velocity_estimation": {
+    "method": "WORLD_POSITION_SECANT_AND_SHORTEST_WORLD_SO3_LOG_THEN_CURRENT_BODY",
+    "prefix_array_indices": [
+      147,
+      149
+    ],
+    "physical_steps": [
+      148,
+      150
+    ],
+    "source_world_index": 5,
+    "timestamps_s": [
+      1.4899989366531372,
+      1.5099989175796509
+    ],
+    "window_seconds_actual": 0.019999980926513672,
+    "latest_input_step": 150,
+    "estimator_inputs": "OBJECT_POSE_AND_TIMESTAMP_ONLY",
+    "future_or_reference_or_true_velocity_used_by_estimator": false,
+    "estimated_linear_world_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "estimated_angular_world_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "estimated_object_qvel_actual_body": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "posthoc_truth_linear_world_m_s": [
+      1.816934047660368e-09,
+      -4.138074327642016e-09,
+      7.13427397158739e-08
+    ],
+    "posthoc_truth_angular_world_rad_s": [
+      1.1293137575448269e-07,
+      4.883097618787969e-08,
+      4.697303302908395e-09
+    ],
+    "posthoc_linear_error_norm_m_s": 7.148574276484486e-08,
+    "posthoc_angular_error_norm_rad_s": 1.2312605136030697e-07,
+    "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/causal_velocity_estimate.npz"
+  },
+  "videos": {
+    "comparison_2x2": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4"
+  },
+  "outputvideo": {
+    "base": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4",
+    "base_duplicate": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4",
+    "nominal_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4",
+    "observed_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4"
+  },
+  "video_status": "RENDERED_FROM_SAVED_STATES_NO_PHYSICS_REPLAY",
+  "execution": {
+    "steps": 450,
+    "shared_prefix_steps": 150,
+    "actual_suffix_steps": 300,
+    "saved_worlds": 4,
+    "num_worlds": 1024,
+    "execution_bank_index": 5,
+    "sim_dt_s": 0.01,
+    "pair_margin_m": -0.005,
+    "outer_revert": false,
+    "predicted_snapshot_used_for_execution": false
+  },
+  "primary_metric": "LAST50_REAL_REFERENCE_TRACKING_ALL_STEPS",
+  "lift_metric_interpretation": "HEIGHT_DESCRIPTION_ONLY_NOT_RECOVERY_GATE",
+  "claim_boundary": "Actual robot proprioception in both arms, nominal versus observed object pose/causal velocity; extra search computation on two development clips, not visual estimation or full task success.",
+  "video": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/feedback_coverage_4grid.mp4"
+}

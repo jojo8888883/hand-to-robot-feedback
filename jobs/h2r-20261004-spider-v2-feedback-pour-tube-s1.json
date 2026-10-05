@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "h2r-20261004-spider-v2-feedback-pour-tube-s1",
+  "display_name": "SPIDER V2 observed object recovery pour_tube search seed1",
+  "managed": true,
+  "priority": 50,
+  "cwd": "/mnt/sdc/dty_user/hand_to_robot_20261002/repos/spider-native",
+  "command": [
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/env/spider-native-py312/bin/python",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_feedback_coverage.py",
+    "--seed",
+    "1",
+    "--spec",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_POUR_TUBE_S1_SPEC.json",
+    "--controls",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/trajectory_mjwp_fast.npz",
+    "--reference",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/official_loaded_reference.npz",
+    "--output-dir",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1",
+    "--job-id",
+    "h2r-20261004-spider-v2-feedback-pour-tube-s1"
+  ],
+  "env": {
+    "WANDB_MODE": "disabled",
+    "WANDB_SILENT": "true",
+    "PYOPENGL_PLATFORM": "egl",
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONPATH": "/mnt/sdc/dty_user/hand_to_robot_20261002/repos/spider-native",
+    "MUJOCO_GL": "egl",
+    "TORCHINDUCTOR_CACHE_DIR": "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/torchinductor_cache",
+    "WARP_CACHE_PATH": "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/warp_cache"
+  },
+  "gpu": {
+    "allowed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "mode": "idle-first-shared",
+    "idle_memory_mib": 500,
+    "expected_peak_mib": 20000,
+    "reserve_mib": 4096,
+    "warning_free_mib": 6144,
+    "stop_free_mib": 3072,
+    "pressure_checks": 2,
+    "foreign_owner_policy": "coexist-until-pressure",
+    "settle_seconds": 5
+  },
+  "preflight": {
+    "paths": [
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_feedback_coverage.py",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_POUR_TUBE_S1_SPEC.json",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/trajectory_mjwp_fast.npz",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/official_loaded_reference.npz",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_live_branch.py",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_native_v2_position.py",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_pool_selection.py",
+      "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_causal_velocity.py"
+    ],
+    "disk_min_free_gib": {
+      "/": 10,
+      "/mnt/sdc": 20
+    },
+    "commands": [
+      [
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/env/spider-native-py312/bin/python",
+        "-c",
+        "import torch, mujoco, mujoco_warp, warp, spider"
+      ],
+      [
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/env/spider-native-py312/bin/python",
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_feedback_coverage.py",
+        "--seed",
+        "1",
+        "--spec",
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_POUR_TUBE_S1_SPEC.json",
+        "--controls",
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/trajectory_mjwp_fast.npz",
+        "--reference",
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/official_loaded_reference.npz",
+        "--output-dir",
+        "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1",
+        "--job-id",
+        "h2r-20261004-spider-v2-feedback-pour-tube-s1",
+        "--preflight"
+      ]
+    ],
+    "timeout_seconds": 120
+  },
+  "execution": {
+    "resource_retry_seconds": 60,
+    "oom_retry_seconds": 120,
+    "max_oom_requeues": 0
+  },
+  "completion": {
+    "type": "artifact",
+    "path": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/result.json"
+  },
+  "science": {
+    "protocol_path": "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md"
+  },
+  "progress": {
+    "status_path": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s1/progress.json"
+  }
+}

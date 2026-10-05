@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/env/spider-native-py312/bin/python",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/scripts/probe_v2_feedback_coverage.py",
+    "--seed",
+    "0",
+    "--spec",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_POUR_TUBE_S0_SPEC.json",
+    "--controls",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/trajectory_mjwp_fast.npz",
+    "--reference",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/pour_tube/nominal_s0/official_loaded_reference.npz",
+    "--output-dir",
+    "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/pour_tube/s0",
+    "--job-id",
+    "h2r-20261004-spider-v2-feedback-pour-tube-s0"
+  ],
+  "finished_at": "2026-10-04T16:57:19.490432+08:00",
+  "returncode": 0,
+  "started_at": "2026-10-04T16:55:33.732889+08:00"
+}

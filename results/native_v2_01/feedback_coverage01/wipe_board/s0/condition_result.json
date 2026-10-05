@@ -1,0 +1,673 @@
+{
+  "status": "COMPLETE",
+  "protocol": "NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md",
+  "seed": 0,
+  "base_controls_seed": 0,
+  "task": "wipe_board",
+  "job_id": "h2r-20261004-spider-v2-feedback-wipe-board-s0",
+  "source_revision": "44717007de41cbef7565dff7ff9f4453557a2d3d",
+  "controls_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/wipe_board/nominal_s0/trajectory_mjwp_fast.npz",
+  "reference_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/coverage01/wipe_board/nominal_s0/official_loaded_reference.npz",
+  "spec_source": "/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/V2_FEEDBACK_WIPE_BOARD_S0_SPEC.json",
+  "run_spec": {
+    "job_id": "h2r-20261004-spider-v2-feedback-wipe-board-s0",
+    "source_revision": "44717007de41cbef7565dff7ff9f4453557a2d3d",
+    "dataset_revision": "8b0cdf2b24cc86d1c859050c5b0317ddbec59a63",
+    "protocol": "NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md",
+    "method": "single_step150_observed_object_recovery_diagnostic",
+    "seed": 0,
+    "author_cli_arguments": [
+      "+override=oakinkv2_fast",
+      "task=wipe_board",
+      "embodiment_type=right",
+      "data_id=0",
+      "robot_type=xhand",
+      "viewer=''",
+      "show_viewer=false",
+      "++wait_on_finish=false",
+      "save_video=true",
+      "save_info=true",
+      "save_config=true",
+      "++sanity_check_seconds=0",
+      "seed=0",
+      "dataset_dir=/mnt/sdc/dty_user/hand_to_robot_20261002/native_spider/v2_coverage01/wipe_board",
+      "num_dr=1",
+      "xy_offset_range=[0.0,0.0]",
+      "pair_margin_range=[-0.005,-0.005]"
+    ],
+    "execution_semantics": "Four actual continuous execution arms after common150-step prefix; sameactualrobotstate planning, nominal versus observed object state only; originalfallback on unacceptedsearch.",
+    "condition": "feedback_coverage01/wipe_board/s0",
+    "cpu_midpoint_compatibility": true,
+    "diagnostic_static_bypass": true,
+    "retained_original_result": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/official_fast_s0/condition_result.json",
+    "retained_compatible_static_result": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/static_midpoint_off/trace.json",
+    "preflight_filename": "V2_FEEDBACK_WIPE_BOARD_S0_PREFLIGHT.json",
+    "comparison_mode": "nominal_object_vs_observed_object",
+    "original_control_seed": 0
+  },
+  "trajectory": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/trajectories.npz",
+  "boundary_state": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/boundary_state.npz",
+  "group_order": [
+    "base",
+    "base_duplicate",
+    "nominal_object",
+    "observed_object"
+  ],
+  "groups": [
+    {
+      "name": "base",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 1,
+          "xy_offset_m": [
+            -0.005,
+            0.0
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.10208054368108273,
+            "root_position_error_mean_cm": 10.208054368108273,
+            "root_position_error_max_m": 0.47818150341024973,
+            "root_position_error_max_cm": 47.818150341024975,
+            "so3_error_mean_rad": 0.30655111196656054,
+            "so3_error_max_rad": 0.7136795440638826,
+            "max_root_rise_m": 0.0017553586512804031,
+            "track_reference_proxy_all_steps": false
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": -0.004840390756726265,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 39.98225873061442,
+            "root_position_error_max_cm": 47.818150341024975,
+            "so3_error_mean_rad": 0.647904716440588,
+            "so3_error_max_rad": 0.7136795440638826,
+            "track_reference_proxy_all_steps": false
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": -0.004837788641452789,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.16115126536833638,
+            "root_position_error_mean_cm": 16.11512653683364,
+            "root_position_error_max_m": 0.47818150341024973,
+            "so3_error_mean_rad": 0.48748248361120705,
+            "so3_error_max_rad": 0.7136795440638826
+          }
+        }
+      ]
+    },
+    {
+      "name": "base_duplicate",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 1,
+          "xy_offset_m": [
+            -0.005,
+            0.0
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.037280459148403354,
+            "root_position_error_mean_cm": 3.7280459148403353,
+            "root_position_error_max_m": 0.15039850123610507,
+            "root_position_error_max_cm": 15.039850123610506,
+            "so3_error_mean_rad": 0.2629951896520946,
+            "so3_error_max_rad": 1.2756611748530615,
+            "max_root_rise_m": 0.03639466315507889,
+            "track_reference_proxy_all_steps": false
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": -0.0003630407154560089,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 9.113439704075835,
+            "root_position_error_max_cm": 15.039850123610506,
+            "so3_error_mean_rad": 0.6920330528162779,
+            "so3_error_max_rad": 1.2756611748530615,
+            "track_reference_proxy_all_steps": false
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": 0.0009912215173244476,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.0560191780144873,
+            "root_position_error_mean_cm": 5.60191780144873,
+            "root_position_error_max_m": 0.15039850123610507,
+            "so3_error_mean_rad": 0.41681706608026853,
+            "so3_error_max_rad": 1.2756611748530615
+          }
+        }
+      ]
+    },
+    {
+      "name": "nominal_object",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 1,
+          "xy_offset_m": [
+            -0.005,
+            0.0
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.0813943504381902,
+            "root_position_error_mean_cm": 8.13943504381902,
+            "root_position_error_max_m": 0.4092907180195023,
+            "root_position_error_max_cm": 40.92907180195023,
+            "so3_error_mean_rad": 0.35472927384696623,
+            "so3_error_max_rad": 0.9063278682297251,
+            "max_root_rise_m": 0.010741792619228363,
+            "track_reference_proxy_all_steps": false
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": -0.005688585340976715,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 33.12357129782025,
+            "root_position_error_max_cm": 40.92907180195023,
+            "so3_error_mean_rad": 0.8451301176986825,
+            "so3_error_max_rad": 0.9063278682297251,
+            "track_reference_proxy_all_steps": false
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": -0.004837788641452789,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.12758984811534477,
+            "root_position_error_mean_cm": 12.758984811534477,
+            "root_position_error_max_m": 0.4092907180195023,
+            "so3_error_mean_rad": 0.565647053300994,
+            "so3_error_max_rad": 0.9063278682297251
+          }
+        }
+      ]
+    },
+    {
+      "name": "observed_object",
+      "worlds": [
+        {
+          "world_index": 0,
+          "source_bank_index": 1,
+          "xy_offset_m": [
+            -0.005,
+            0.0
+          ],
+          "real_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              1,
+              391
+            ],
+            "samples": 391,
+            "root_position_error_mean_m": 0.030784495173536028,
+            "root_position_error_mean_cm": 3.0784495173536026,
+            "root_position_error_max_m": 0.06727878627793196,
+            "root_position_error_max_cm": 6.727878627793197,
+            "so3_error_mean_rad": 0.13891212676810813,
+            "so3_error_max_rad": 0.42141012010575296,
+            "max_root_rise_m": 0.04716422036290169,
+            "track_reference_proxy_all_steps": true
+          },
+          "last_0p5s_lift_window": {
+            "output_slice_zero_based": [
+              341,
+              391
+            ],
+            "physical_steps_start_end_inclusive": [
+              342,
+              391
+            ],
+            "samples": 50,
+            "minimum_root_rise_m": 0.040446553379297256,
+            "lift_proxy_all_steps_at_least_0p10m": false,
+            "root_position_error_mean_cm": 5.45410915422035,
+            "root_position_error_max_cm": 6.009956976936267,
+            "so3_error_mean_rad": 0.16384252682792755,
+            "so3_error_max_rad": 0.19319263869092124,
+            "track_reference_proxy_all_steps": true
+          },
+          "padded_tail_after_reference": {
+            "physical_steps_start_end_inclusive": [
+              392,
+              450
+            ],
+            "samples": 59,
+            "maximum_root_rise_m": 0.06336889788508415,
+            "tracking_metrics_interpreted": false
+          },
+          "local_reference_window": {
+            "physical_steps_start_end_inclusive": [
+              151,
+              391
+            ],
+            "samples": 241,
+            "root_position_error_mean_m": 0.04548008293493076,
+            "root_position_error_mean_cm": 4.548008293493076,
+            "root_position_error_max_m": 0.06727878627793196,
+            "so3_error_mean_rad": 0.21550388106931956,
+            "so3_error_max_rad": 0.42141012010575296
+          }
+        }
+      ]
+    }
+  ],
+  "optimizations": {
+    "nominal_object": {
+      "succeeded": true,
+      "status": "ACCEPTED",
+      "wall_seconds": 45.823790666647255,
+      "opt_steps": 4,
+      "attempts": 1,
+      "candidate_world_steps": 1228800,
+      "nominal_config": {
+        "num_dr": 1,
+        "xy_offset": 0.0,
+        "margin": -0.005,
+        "iterations_per_attempt": 4
+      },
+      "planning_robot_source_bank_index": 1,
+      "planning_object_qpos_bank_index": 4,
+      "object_velocity_source": "BANK4_BODY_LOCAL_UNCHANGED",
+      "planning_robot_velocity_bank_index": 1,
+      "planning_solver_warmstart": "ZERO",
+      "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_nominal_object.npz",
+      "warmstart_slice": [
+        150,
+        450
+      ],
+      "reference_slice": [
+        151,
+        451
+      ],
+      "starting_rng_identical": true,
+      "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/optimization_nominal_object.npz"
+    },
+    "observed_object": {
+      "succeeded": true,
+      "status": "ACCEPTED",
+      "wall_seconds": 11.493644170463085,
+      "opt_steps": 4,
+      "attempts": 1,
+      "candidate_world_steps": 1228800,
+      "nominal_config": {
+        "num_dr": 1,
+        "xy_offset": 0.0,
+        "margin": -0.005,
+        "iterations_per_attempt": 4
+      },
+      "planning_robot_source_bank_index": 1,
+      "planning_object_qpos_bank_index": 1,
+      "object_velocity_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+      "planning_robot_velocity_bank_index": 1,
+      "planning_solver_warmstart": "ZERO",
+      "reconstruction": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_observed_object.npz",
+      "warmstart_slice": [
+        150,
+        450
+      ],
+      "reference_slice": [
+        151,
+        451
+      ],
+      "starting_rng_identical": true,
+      "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/optimization_observed_object.npz"
+    }
+  },
+  "bank_fields_exact": {
+    "execution_all1024": {
+      "qpos": true,
+      "qvel": true,
+      "qacc": true,
+      "time": true,
+      "ctrl": true,
+      "act": true,
+      "act_dot": true,
+      "qacc_warmstart": true,
+      "qfrc_applied": true,
+      "xfrc_applied": true,
+      "energy": true,
+      "mocap_pos": true,
+      "mocap_quat": true,
+      "xpos": true,
+      "xquat": true,
+      "xmat": true,
+      "xipos": true,
+      "ximat": true,
+      "geom_xpos": true,
+      "geom_xmat": true,
+      "site_xpos": true,
+      "site_xmat": true,
+      "cacc": true,
+      "cfrc_int": true,
+      "cfrc_ext": true,
+      "sensordata": true,
+      "actuator_length": true,
+      "actuator_velocity": true,
+      "actuator_force": true,
+      "ten_length": true,
+      "ten_velocity": true
+    }
+  },
+  "reconstruction": {
+    "api": "mujoco_warp.reset_data/write_basic_inputs/forward",
+    "common_inputs": {
+      "time": true,
+      "ctrl": true,
+      "act": true,
+      "qacc_warmstart": true,
+      "qfrc_applied": true,
+      "xfrc_applied": true,
+      "mocap_pos": true,
+      "mocap_quat": true,
+      "robot_qpos_0_18_identical": true,
+      "robot_qpos_is_actual": true,
+      "robot_qvel_0_18_identical": true,
+      "robot_qvel_is_actual": true,
+      "nominal_object_qpos_is_bank4": true,
+      "nominal_object_qvel_is_bank4_body_local_unchanged": true,
+      "observed_object_qpos_is_actual": true,
+      "observed_object_qvel_is_pose_only_estimate": true,
+      "zero_external_forces": true
+    },
+    "arms": {
+      "nominal_object": {
+        "requested_basic_all1024_exact_before_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "requested_basic_all1024_exact_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "all31_fields_finite_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "qacc": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "act_dot": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "energy": true,
+          "mocap_pos": true,
+          "mocap_quat": true,
+          "xpos": true,
+          "xquat": true,
+          "xmat": true,
+          "xipos": true,
+          "ximat": true,
+          "geom_xpos": true,
+          "geom_xmat": true,
+          "site_xpos": true,
+          "site_xmat": true,
+          "cacc": true,
+          "cfrc_int": true,
+          "cfrc_ext": true,
+          "sensordata": true,
+          "actuator_length": true,
+          "actuator_velocity": true,
+          "actuator_force": true,
+          "ten_length": true,
+          "ten_velocity": true
+        },
+        "static_world_matches_actual_prefix": {
+          "floor_geom0_xpos": true,
+          "floor_geom0_xmat": true,
+          "world_body0_xquat": true
+        },
+        "qacc_warmstart_zero": true,
+        "planning_robot_qpos_bank_index": 1,
+        "robot_qvel_bank_index": 1,
+        "object_qpos_bank_index": 4,
+        "object_qvel_source": "BANK4_BODY_LOCAL_UNCHANGED",
+        "angular_velocity_frame": "NOMINAL_BODY_LOCAL",
+        "derived_state_source": "GPU_FORWARD",
+        "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_nominal_object.npz"
+      },
+      "observed_object": {
+        "requested_basic_all1024_exact_before_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "requested_basic_all1024_exact_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "mocap_pos": true,
+          "mocap_quat": true
+        },
+        "all31_fields_finite_after_forward": {
+          "qpos": true,
+          "qvel": true,
+          "qacc": true,
+          "time": true,
+          "ctrl": true,
+          "act": true,
+          "act_dot": true,
+          "qacc_warmstart": true,
+          "qfrc_applied": true,
+          "xfrc_applied": true,
+          "energy": true,
+          "mocap_pos": true,
+          "mocap_quat": true,
+          "xpos": true,
+          "xquat": true,
+          "xmat": true,
+          "xipos": true,
+          "ximat": true,
+          "geom_xpos": true,
+          "geom_xmat": true,
+          "site_xpos": true,
+          "site_xmat": true,
+          "cacc": true,
+          "cfrc_int": true,
+          "cfrc_ext": true,
+          "sensordata": true,
+          "actuator_length": true,
+          "actuator_velocity": true,
+          "actuator_force": true,
+          "ten_length": true,
+          "ten_velocity": true
+        },
+        "static_world_matches_actual_prefix": {
+          "floor_geom0_xpos": true,
+          "floor_geom0_xmat": true,
+          "world_body0_xquat": true
+        },
+        "qacc_warmstart_zero": true,
+        "planning_robot_qpos_bank_index": 1,
+        "robot_qvel_bank_index": 1,
+        "object_qpos_bank_index": 1,
+        "object_qvel_source": "ACTUAL_PREFIX148/150_POSE_TIME_ONLY",
+        "angular_velocity_frame": "ACTUAL_BODY_LOCAL",
+        "derived_state_source": "GPU_FORWARD",
+        "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_observed_object.npz"
+      }
+    },
+    "gpu_dynamic_checks": true
+  },
+  "planning_inputs": {
+    "nominal_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_nominal_object.npz",
+    "observed_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/reconstruction_observed_object.npz"
+  },
+  "velocity_estimation": {
+    "method": "WORLD_POSITION_SECANT_AND_SHORTEST_WORLD_SO3_LOG_THEN_CURRENT_BODY",
+    "prefix_array_indices": [
+      147,
+      149
+    ],
+    "physical_steps": [
+      148,
+      150
+    ],
+    "source_world_index": 1,
+    "timestamps_s": [
+      1.4899989366531372,
+      1.5099989175796509
+    ],
+    "window_seconds_actual": 0.019999980926513672,
+    "latest_input_step": 150,
+    "estimator_inputs": "OBJECT_POSE_AND_TIMESTAMP_ONLY",
+    "future_or_reference_or_true_velocity_used_by_estimator": false,
+    "estimated_linear_world_m_s": [
+      -0.005334620794888301,
+      -0.005000834465822664,
+      -0.0007726259447345206
+    ],
+    "estimated_angular_world_rad_s": [
+      0.04410898266896376,
+      -0.025330556277857918,
+      -0.40050155483008837
+    ],
+    "estimated_object_qvel_actual_body": [
+      -0.005334620794888301,
+      -0.005000834465822664,
+      -0.0007726259447345206,
+      -0.007193528745858312,
+      -0.39878566406909116,
+      0.0625058567808768
+    ],
+    "posthoc_truth_linear_world_m_s": [
+      -0.005769756622612476,
+      -0.00453249691054225,
+      -0.001839484553784132
+    ],
+    "posthoc_truth_angular_world_rad_s": [
+      -0.01473294672127946,
+      -0.10563861062917018,
+      -0.3785267869727882
+    ],
+    "posthoc_linear_error_norm_m_s": 0.0012437325057899349,
+    "posthoc_angular_error_norm_rad_s": 0.10195414003581181,
+    "output": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/causal_velocity_estimate.npz"
+  },
+  "videos": {
+    "comparison_2x2": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4"
+  },
+  "outputvideo": {
+    "base": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4",
+    "base_duplicate": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4",
+    "nominal_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4",
+    "observed_object": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4"
+  },
+  "video_status": "RENDERED_FROM_SAVED_STATES_NO_PHYSICS_REPLAY",
+  "execution": {
+    "steps": 450,
+    "shared_prefix_steps": 150,
+    "actual_suffix_steps": 300,
+    "saved_worlds": 4,
+    "num_worlds": 1024,
+    "execution_bank_index": 1,
+    "sim_dt_s": 0.01,
+    "pair_margin_m": -0.005,
+    "outer_revert": false,
+    "predicted_snapshot_used_for_execution": false
+  },
+  "primary_metric": "LAST50_REAL_REFERENCE_TRACKING_ALL_STEPS",
+  "lift_metric_interpretation": "HEIGHT_DESCRIPTION_ONLY_NOT_RECOVERY_GATE",
+  "claim_boundary": "Actual robot proprioception in both arms, nominal versus observed object pose/causal velocity; extra search computation on two development clips, not visual estimation or full task success.",
+  "video": "/mnt/sdc/dty_user/hand_to_robot_20261002/results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4"
+}
