@@ -1,32 +1,28 @@
-# Hand-to-Robot Feedback
+# SPIDER 复现与中途重规划
 
-在 SPIDER 上实现的一次物体状态反馈重规划：机械手执行途中，根据物体实际状态调整剩余动作，以改善初始位置偏移后的抓取保持和轨迹跟踪。
+我用 SPIDER 把官方处理好的三维手物示范转成了 XHand 的控制序列，并在仿真里回放。把物体起点挪开 5 mm 后，照原动作执行有时会抓不住。执行到 1.5 秒时，我暂停仿真，读取物体位姿，用相隔 20 ms 的两帧位姿估计速度，再用 SPIDER 的求解器重算剩下的动作。
 
-本仓库保存 2026-10-04 完成的阶段结果，来源为研究工作区提交 `a3bd8dc`。六组实验已完成；这是仿真中途纠偏的实现与对照，尚未接入视觉状态估计。
+[项目演示页](https://hand-to-robot-yuzhou.scut-lang.chatgpt.site/) · [运行条件](REPRODUCE.md) · [SPIDER 官方代码](https://github.com/facebookresearch/spider)
 
-## 看效果
+## 仿真回放
 
-[播放 wipe_board 四格对照](results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4) · [播放 pour_tube 四格对照](results/native_v2_01/feedback_coverage01/pour_tube/s0/feedback_coverage_4grid.mp4)
+[![wipe_board 四组仿真对照，左上原动作中的物体已滑离，右下反馈重规划组仍保持接触](assets/wipe-board-preview.jpg)](results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4)
 
-每段约 4.5 秒。左上继续原控制，右上重复原控制，左下依据预计物体状态重新规划，右下依据实际物体状态重新规划。视频从真实仿真执行状态渲染。
+`wipe_board`，seed 0，第 3.26 秒。左上继续原动作，右上重复原动作，左下用预计物体状态重规划，右下用仿真中读到的状态重规划。
 
-| 固定开发片段 | 原控制 | 原控制副本 | 预计物体状态重规划 | 实际物体状态重规划 |
-|---|---:|---:|---:|---:|
-| pour_tube | 0/3 | 0/3 | 2/3 | 3/3 |
-| wipe_board | 0/3 | 0/3 | 0/3 | 3/3 |
+[板状物体回放](results/native_v2_01/feedback_coverage01/wipe_board/s0/feedback_coverage_4grid.mp4) · [管状物体回放](results/native_v2_01/feedback_coverage01/pour_tube/s0/feedback_coverage_4grid.mp4)
 
-通过指标为末 50 个真实参考步的位置和朝向跟踪。每个片段复用一条原控制，三次是恢复搜索种子。完整定义与原始数值见[冻结协议](NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md)、[结果报告](V2_FEEDBACK_COVERAGE_RESULT_REPORT.md)和[JSON 汇总](results/native_v2_01/feedback_coverage01/summary.json)。
+## 两条示范的跟踪结果
 
-## 实现
+| 示范 | 原动作 | 原动作副本 | 预计物体状态重规划 | 仿真物体状态重规划 |
+| --- | ---: | ---: | ---: | ---: |
+| `wipe_board` | 0/3 | 0/3 | 0/3 | 3/3 |
+| `pour_tube` | 0/3 | 0/3 | 2/3 | 3/3 |
 
-运行从官方预处理三维示范开始，已经贯通控制优化、连续物理执行、固定 1.5 秒处的一次反馈重规划和结果回放。物体姿态目前取自仿真器，速度由过去两帧姿态估计。重规划期间仿真暂停；尚未接入人手视频解析前端、图像姿态跟踪、机械臂或真机。
+每条示范共用一份原控制，三次对应三个重规划搜索种子。通过的条件是末段 50 个有效参考步中，物体位置误差每步都小于 10 cm、朝向误差每步都小于 0.5 rad。两种重规划使用相同的机器人状态和搜索设置，区别在于求解器拿到的物体状态。结果衡量这两条固定开发示范的轨迹跟踪，反馈位姿直接来自仿真器。[实验协议](NATIVE_V2_FEEDBACK_COVERAGE_PROTOCOL.md) · [结果报告](V2_FEEDBACK_COVERAGE_RESULT_REPORT.md) · [结果数据](results/native_v2_01/feedback_coverage01/summary.json)
 
-主要入口是 `native_spider/probe_v2_feedback_coverage.py`，分析入口是 `native_spider/analyze_v2_feedback_coverage.py`。SPIDER 提供官方优化算法与配置，本项目增加执行适配、状态反馈和匹配对照；不将观察后重规划本身宣称为新算法。
+## 代码
 
-## 文件与运行条件
-
-`native_spider/` 保存入口、全部本地导入模块、六份实验配置及依赖版本。`jobs/` 保存六个已完成 Autopilot 作业的命令和资源配置，不应重复提交原 job ID。`results/` 保存小型结果记录及两段代表性视频。
-
-代码沿用原运行环境路径。运行需要官方 SPIDER 源码、所列 Python/CUDA 环境、场景/网格和保存的控制、参考、执行数组。这些大体积运行资产保留在原工作目录及 A800，未包含在本源码备份中；单独克隆仓库不能立即重跑或重算所有指标。具体位置、固定版本与恢复说明见[阶段小结](FEEDBACK_CHECKPOINT.md)。
-
-两条固定开发案例中的改善已观测到；更多场景的稳定效果及带视觉误差的恢复属于后续阶段。
+- [重规划入口](native_spider/probe_v2_feedback_coverage.py) 包含状态读取、速度估计和使用同一执行起点的四组对照。
+- [分析脚本](native_spider/analyze_v2_feedback_coverage.py) 从原始执行数组计算跟踪误差和通过次数。
+- [运行条件](REPRODUCE.md) 列出固定的上游版本、所需数据和命令。重跑需要另外准备场景资产、原控制及参考轨迹。
